@@ -33,7 +33,8 @@
 
         input[type="text"],
         input[type="number"],
-        select {
+        select,
+        textarea {
             width: 100%;
             padding: 8px;
             margin-bottom: 10px;
@@ -52,6 +53,30 @@
 
         button:hover {
             background-color: #555;
+        }
+
+        #education-form label {
+            display: inline-block;
+            width: 150px;
+            vertical-align: top;
+        }
+
+        #education-form input[type="checkbox"] {
+            margin-top: 6px;
+        }
+
+        #education-form button {
+            margin-top: 10px;
+        }
+
+        #education-form::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .subject-div {
+            margin-bottom: 10px;
         }
 
         #donation-items, #filtered-donations {
@@ -79,11 +104,34 @@
         <section id="education">
             <h2>Educational Support</h2>
             <form id="education-form" action="education.html">
-                <label for="subjects">Subjects:</label>
-                <input type="text" id="subjects" placeholder="Enter subjects you can teach">
-
-                <label for="pro-bono-classes">Pro-bono Classes:</label>
-                <input type="number" id="pro-bono-classes" min="0">
+                <div class="subject-div">
+                    <label for="math">Math</label>
+                    <input type="checkbox" id="math" name="subject" value="Math">
+                </div>
+                <div class="subject-div">
+                    <label for="science">Science</label>
+                    <input type="checkbox" id="science" name="subject" value="Science">
+                </div>
+                <div class="subject-div">
+                    <label for="history">History</label>
+                    <input type="checkbox" id="history" name="subject" value="History">
+                </div>
+                <div class="subject-div">
+                    <label for="language">Language</label>
+                    <input type="checkbox" id="language" name="subject" value="Language">
+                </div>
+                <div class="subject-div">
+                    <label for="arts">Arts</label>
+                    <input type="checkbox" id="arts" name="subject" value="Arts">
+                </div>
+                <div class="subject-div">
+                    <label for="music">Music</label>
+                    <input type="checkbox" id="music" name="subject" value="Music">
+                </div>
+                <div class="subject-div" style="margin-bottom: 20px;">
+                    <label for="pro-bono-classes">Pro-bono Classes:</label>
+                    <input type="number" id="pro-bono-classes" min="0">
+                </div>
 
                 <label for="pro-bono-students">Pro-bono Students:</label>
                 <input type="number" id="pro-bono-students" min="0">

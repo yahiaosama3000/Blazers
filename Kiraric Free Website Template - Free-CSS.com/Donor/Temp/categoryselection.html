@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rectangular Buttons</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+    }
+
+    .container {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .title {
+        color: darkred;
+        font-size: 24px;
+        font-weight: bold;
+        text-shadow: 1px 1px 1px #000;
+        margin-bottom: 20px;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .button {
+        width: 150px;
+        height: 100px;
+        background-color: #4CAF50;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 10px;
+        border-radius: 10px;
+    }
+
+    .label {
+        color: #fff;
+        font-family: Arial, sans-serif;
+    }
+
+    .button a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .circle-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .circle {
+        width: 100px;
+        height: 100px;
+        background-color: #FFD700;
+        border: 2px solid black;
+        border-radius: 50%;
+        margin: 0 20px;
+        position: relative;
+    }
+
+    .circle .label {
+        color: #000;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="title" style="margin-top: 50px;">Please select your category</div>
+    <div class="button-container">
+        <div class="button">
+            <a href="clothes.html" class="label">Clothes</a>
+        </div>
+        <div class="button">
+            <a href="toys.html" class="label">Toys</a>
+        </div>
+        <div class="button">
+            <a href="food.html" class="label">Food</a>
+        </div>
+        <div class="button">
+            <a href="medical_supplies.html" class="label">Medical Supplies</a>
+        </div>
+        <div class="button">
+            <a href="school_supplies.html" class="label">School Supplies</a>
+        </div>
+        <div class="button">
+            <a href="blood_donations.html" class="label">Blood Donations</a>
+        </div>
+    </div>
+    <div class="circle-container">
+        <div class="circle">
+            <a href="doctorafterregister.html" class="label">Healthcare Services</a>
+        </div>
+        <div class="circle">
+            <a href="teacherafterregister.html" class="label">Educational Support</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
