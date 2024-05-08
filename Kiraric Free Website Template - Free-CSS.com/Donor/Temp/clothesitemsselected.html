@@ -25,6 +25,16 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif; text-align: center;}
   display: inline-block;
   text-align: center;
 }
+.select-container {
+  margin-top: 20px;
+}
+.golden-box {
+  background-color: gold;
+  color: black;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 20px;
+}
 </style>
 </head>
 <body>
@@ -55,14 +65,42 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif; text-align: center;}
     <div class="w3-quarter product-container">
       <img src="clothes.jpg" alt="Clothes" style="width:100%">
       <h3>Clothes</h3>
-      <p>Type: T-Shirt</p>
-      <p>Age: Adult</p>
-      <p>Gender: Unisex</p>
-      <p>Season: All Seasons</p>
-      <p>Material: Cotton</p>
+      <div class="select-container">
+        <label for="age">Age:</label>
+        <select id="age">
+          <option value="young">Young</option>
+          <option value="teen">Teen</option>
+          <option value="adult">Adult</option>
+        </select>
+      </div>
+      <div class="select-container">
+        <label for="gender">Gender:</label>
+        <select id="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+      <div class="select-container">
+        <label for="season">Season:</label>
+        <select id="season">
+          <option value="spring">Spring</option>
+          <option value="summer">Summer</option>
+          <option value="autumn">Autumn</option>
+          <option value="winter">Winter</option>
+        </select>
+      </div>
+      <div class="select-container">
+        <label for="material">Material:</label>
+        <select id="material">
+          <option value="cotton">Cotton</option>
+          <option value="wool">Wool</option>
+          <option value="leather">Leather</option>
+        </select>
+      </div>
       <label for="quantity">Quantity:</label>
-      <input type="number" id="quantity" name="quantity" min="1">
-      <button class="donate-button" onclick="redirectToDonatePage()">View Details</button>
+      <input type="number" id="quantity" name="quantity" min="1" onchange="updateCost()">
+      <div id="cost" class="golden-box">Cost: 0 L.E.</div>
+      <button class="donate-button" onclick="redirectToDonatePage()">Donate</button>
     </div>
   </div>
 
@@ -80,7 +118,22 @@ function w3_close() {
 
 // Function to redirect to donate page
 function redirectToDonatePage() {
-  window.location.href = "donate.html"; // Change this to the desired HTML file
+  var age = document.getElementById("age").value;
+  var gender = document.getElementById("gender").value;
+  var season = document.getElementById("season").value;
+  var material = document.getElementById("material").value;
+  var quantity = document.getElementById("quantity").value;
+  
+  var url = "donate.html?age=" + age + "&gender=" + gender + "&season=" + season + "&material=" + material + "&quantity=" + quantity;
+  
+  window.location.href = url;
+}
+
+// Function to update cost
+function updateCost() {
+  var quantity = document.getElementById("quantity").value;
+  var cost = 30 * quantity;
+  document.getElementById("cost").innerText = "Cost: " + cost + " L.E.";
 }
 </script>
 
