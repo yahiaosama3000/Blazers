@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #192a56; /* Dark blue background */
+    color: #fff; /* White text color */
+}
+
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #34495e; /* Dark blue container background */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff; /* White header text color */
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+th, td {
+    padding: 15px;
+    border-bottom: 1px solid #576574; /* Light gray border */
+    text-align: left;
+}
+
+
+th {
+    background-color: #2c3e50; /* Darker blue table header background */
+    color: #fff; /* White table header text color */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+.view-button {
+    padding: 8px 15px;
+    background-color: #fff; /* White button background */
+    color: #192a56; /* Dark blue button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold; /* Bold button text */
+}
+
+
+.view-button:hover {
+    background-color: #95a5a6; /* Light gray on hover */
+    color: #fff; /* White text color on hover */
+}
+
+
+.no-access {
+    color: #999; /* Gray text color for 'No access' */
+    font-style: italic;
+}
+
+

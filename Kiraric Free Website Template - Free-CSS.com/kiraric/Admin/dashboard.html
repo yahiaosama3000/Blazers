@@ -10,17 +10,22 @@
 
 <div class="container">
   <h1>Admin Dashboard</h1>
-  <div class="section">
-    <h2>View Organizations List</h2>
-    <button onclick="redirectToOrganizationsPage()">View Organizations</button>
-  </div>
-  <div class="section">
-    <h2>View Donors List</h2>
-    <button onclick="viewDonors()">View Donors</button>
-  </div>
+  <!-- Button to view organizations list -->
+  <button id="viewOrgListButton">View Organizations List</button>
+  <!-- Button to view donor list -->
+  <button id="viewDonorListButton">View Donor List</button>
 </div>
 
 <script src="dashboard.js"></script>
+<script>
+document.getElementById("viewOrgListButton").addEventListener("click", function() {
+  window.location.href = "organizations.html"; // Redirect to the organizations page
+});
+
+document.getElementById("viewDonorListButton").addEventListener("click", function() {
+  window.location.href = "donors.html"; // Redirect to the donor page
+});
+</script>
 
 </body>
 </html>

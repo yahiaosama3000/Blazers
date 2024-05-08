@@ -4,8 +4,6 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     // Dummy admin credentials
     const adminUsername = "admin";
     const adminPassword = "admin123";
-    console.log("Script file loaded successfully!");
-
     
     // Get user input
     const username = document.getElementById("username").value;
@@ -14,10 +12,11 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     // Check if username and password match the admin credentials
     if (username === adminUsername && password === adminPassword) {
       alert("Login successful! Redirecting to dashboard...");
-      // Redirect to dashboard
+      // Redirect to dashboard or perform other actions here
       window.location.href = "dashboard.html";
     } else {
       alert("Invalid username or password. Please try again.");
     }
   });
+  
   
