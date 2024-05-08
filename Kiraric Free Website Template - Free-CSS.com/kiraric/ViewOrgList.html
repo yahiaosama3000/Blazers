@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel</title>
+<link rel="stylesheet" href="ViewOrgList.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Admin Panel</h1>
+    <label for="organizationSelect">Organization List:</label>
+    <select id="organizationSelect" onchange="viewOrganization(this.value)">
+        <option value="" selected disabled>Select an organization</option>
+    </select>
+    <table id="orgList">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Organization list will be populated here -->
+        </tbody>
+    </table>
+</div>
+
+<script src="ViewOrgList.js"></script>
+
+</body>
+</html>
