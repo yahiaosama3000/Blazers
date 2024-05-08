@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Selection Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .selection-box {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        #regularDonor {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        #teacher {
+            background-color: #e74c3c;
+            color: #fff;
+        }
+
+        #doctor {
+            background-color: #2ecc71;
+            color: #fff;
+        }
+
+        #requiredText {
+            background-color: darkred;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="selection-box">
+    <h2 id="selectionText">Please select the following:</h2>
+
+    <button id="regularDonor" class="button">Regular Donor</button>
+    <button id="teacher" class="button">Teacher</button>
+    <button id="doctor" class="button">Doctor</button>
+
+    <div id="requiredText">Required</div>
+</div>
+
+<script>
+    document.getElementById("regularDonor").addEventListener("click", function() {
+        window.location.href = "regulardonorafterregister.html.html";
+    });
+
+    document.getElementById("teacher").addEventListener("click", function() {
+        window.location.href = "teacherregisterdocuments.html";
+    });
+
+    document.getElementById("doctor").addEventListener("click", function() {
+        window.location.href = "teacherregisterdocuments.html";
+    });
+</script>
+
+</body>
+</html>

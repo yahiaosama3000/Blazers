@@ -31,6 +31,6 @@ document.getElementById("registerForm").addEventListener("submit", function(even
     // Here you can send the user object to your server-side script for further processing
     console.log(user);
 
-    // For demo purposes, let's just alert the user
-    alert("Registration Successful!");
+    // Redirect to page2.html after successful registration
+    window.location.href = "register2.html";
 });

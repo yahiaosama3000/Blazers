@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Documents</title>
+    <link rel="stylesheet" href="teacherregisterdocuments.css">
+</head>
+<body>
+    <div class="background-container">
+        <div class="container">
+            <h2>Upload Documents</h2>
+            <div class="upload-section">
+                <label for="file-upload" class="required-text">Required</label>
+                <input type="file" id="file-upload" accept=".pdf, .doc, .docx" multiple style="display: none;">
+                <button class="upload-btn" onclick="chooseFile()">Choose Files</button>
+            </div>
+            <div id="file-list" class="file-list-container"></div>
+            <button id="continue-btn" class="continue-btn" onclick="continueToPage7()">Continue</button>
+        </div>
+    </div>
+    <script src="teacherregisterdocuments.js"></script>
+</body>
+</html>

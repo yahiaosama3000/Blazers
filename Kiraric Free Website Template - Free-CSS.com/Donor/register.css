@@ -1,17 +1,19 @@
 /* styles.css */
 
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-image: url('page1background.jpg'); /* Adjust the path to your background image */
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
 }
 
 .container {
     max-width: 400px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.7); /* Added transparency */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -30,8 +32,8 @@ input[type="email"],
 input[type="tel"],
 input[type="password"],
 select {
-    width: 100%;
-    padding: 10px;
+    width: 95%;
+    padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
