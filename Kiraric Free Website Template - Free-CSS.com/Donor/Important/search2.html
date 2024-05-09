@@ -89,47 +89,54 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 </div>
 
 <script>
-// Function to handle search and redirection
-function searchRedirect() {
-  var searchTerm = document.getElementById("searchInput").value.toLowerCase();
-  switch (searchTerm) {
-    case "clothes":
-      window.location.href = "clothesitems.html";
-      break;
-    case "toys":
-      window.location.href = "toysitems.html";
-      break;
-    case "food":
-      window.location.href = "fooditems.html";
-      break;
-    case "medical supplies":
-      window.location.href = "medicalsuppliesitems.html";
-      break;
-    case "school supplies":
-      window.location.href = "schoolsuppliesitems.html";
-      break;
-    case "blood donations":
-      window.location.href = "blooddonationsitems.html";
-      break;
-    default:
-      alert("No matching category found.");
+  // Function to handle search and redirection
+  function searchRedirect() {
+    var searchTerm = document.getElementById("searchInput").value.toLowerCase();
+    switch (searchTerm) {
+      case "clothes":
+        window.location.href = "clothesitems.html";
+        break;
+      case "toys":
+        window.location.href = "toysitems.html";
+        break;
+      case "food":
+        window.location.href = "fooditems.html";
+        break;
+      case "medical supplies":
+        window.location.href = "medicalsuppliesitems.html";
+        break;
+      case "school supplies":
+        window.location.href = "schoolsuppliesitems.html";
+        break;
+      case "blood donations":
+        window.location.href = "blooddonationsitems.html";
+        break;
+      default:
+        alert("No matching category found.");
+    }
   }
-}
-
-// Function to redirect to specified page
-function redirectTo(page) {
-  window.location.href = page;
-}
-
-// Script to open and close sidebar
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-}
- 
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-}
-</script>
+  
+  // Function to redirect to specified page with confirmation
+  function redirectTo(page) {
+    if (page === 'healthcare_services.html') {
+      var confirmMsg = confirm("You are not a Doctor! Are you sure you want to proceed?");
+      if (!confirmMsg) {
+        return; // Don't proceed if user cancels
+      }
+    }
+    window.location.href = page;
+  }
+  
+  // Script to open and close sidebar
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+  }
+   
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
+  </script>
+  
 
 </body>
 </html>
