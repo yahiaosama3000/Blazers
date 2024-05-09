@@ -20,14 +20,32 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 .donate-button:hover {
   background-color: #0b7dda;
 }
-.label-box {
-  border: 1px solid #ccc;
-  border-radius: 5px;
+.notification-box {
+  background-color: yellow;
+  text-align: center;
   padding: 20px;
+  border-radius: 10px;
   margin-bottom: 20px;
 }
-.label-box label {
-  font-weight: bold;
+.notification-box h3 {
+  margin: 0;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+.button-container .w3-button {
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+.button-container .w3-button.details-button {
+  background-color: #2196F3;
+  color: white;
+}
+.button-container .w3-button.location-button {
+  background-color: #4CAF50;
+  color: white;
 }
 </style>
 </head>
@@ -35,8 +53,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 
 <!-- Sidebar (hidden by default) -->
 <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()"
-  class="w3-bar-item w3-button">Close Menu</a>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button">Close Menu</a>
   <a href="#food" onclick="w3_close()" class="w3-bar-item w3-button">Homepage</a>
   <a href="#food" onclick="w3_close()" class="w3-bar-item w3-button">Notifications</a>
   <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
@@ -46,22 +63,21 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 <div class="w3-top">
   <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
     <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
-    <a href="confirmedteachingposts.html" class="w3-right w3-padding-16">Back</a>
+    <a href="probonoclassesselected.html" class="w3-right w3-padding-16">Back</a>
     <div class="w3-center w3-padding-16">BORG</div>
   </div>
 </div>
-  
-<!-- !PAGE CONTENT! -->
+
 <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
-
-  <!-- Label Box -->
-  <div class="label-box">
-    <label>Appointment:</label> <span>You can be available on 7/7/2024</span><br>
+  <div class="notification-box">
+    <h3>Your request is confirmed</h3>
   </div>
-
+  <div class="button-container">
+    <a href="confirmedprobonoclassesdetails.html" class="w3-button details-button">Details</a>
+    <a href="confirmedprobonoclasseslocation.html" class="w3-button location-button">Location</a>
+  </div>
   <hr id="about">
-
-  <!-- About Section -->
+  
   <div class="w3-container w3-padding-32 w3-center">  
     <h3>Consider Donating for the greater good!</h3><br>
     <img src="charitymoto.jpg" alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">
