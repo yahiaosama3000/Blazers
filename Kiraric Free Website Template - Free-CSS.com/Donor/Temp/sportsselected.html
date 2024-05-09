@@ -63,8 +63,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif; text-align: center;}
   <!-- Product Selection Section -->
   <div class="w3-row-padding w3-padding-16" id="product-selection">
     <div class="w3-quarter product-container">
-      <img src="boardgames.jpg" alt="BoardGames" style="width:100%">
-      <h3>Board Games</h3>
+      <img src="sportstoys.jpg" alt="SportToys" style="width:100%">
+      <h3>Sports</h3>
       <div class="select-container">
         <label for="age">Age:</label>
         <select id="age">
@@ -83,13 +83,12 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif; text-align: center;}
       <div class="select-container">
         <label for="material">Type:</label>
         <select id="material">
-          <option value="monopoly">Monopoly</option>
-          <option value="chess">Chess</option>
-          <option value="scrabble">Scrabble</option>
-          <option value="risk">Risk</option>
-          <option value="battleship">Battleship</option>
-          <option value="checkers">Checkers</option>
-          <option value="snakesandladders">Snakes and Ladders</option>
+          <option value="rollerskates">Roller Skates</option>
+          <option value="frisbee">Frisbee</option>
+          <option value="football">Football</option>
+          <option value="basketball">Basketball</option>
+          <option value="pingpongball">Ping Pong ball</option>
+          <option value="pingpongracket">Ping Pong racket</option>
         </select>
       </div>
       <label for="quantity">Quantity:</label>
@@ -127,7 +126,7 @@ function redirectToDonatePage() {
 // Function to update cost
 function updateCost() {
   var quantity = document.getElementById("quantity").value;
-  var cost = 52 * quantity;
+  var cost = 42 * quantity;
   document.getElementById("cost").innerText = "Cost: " + cost + " L.E.";
 }
 </script>
