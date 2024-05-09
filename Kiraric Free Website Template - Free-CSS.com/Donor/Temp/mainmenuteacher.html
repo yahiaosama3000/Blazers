@@ -20,14 +20,47 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 .donate-button:hover {
   background-color: #0b7dda;
 }
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.button {
+  margin: 10px 0;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  width: fit-content;
+}
+.blue-button {
+  background-color: #2196F3;
+  color: white;
+}
+.blue-button:hover {
+  background-color: #0b7dda;
+}
+.green-button {
+  background-color: #4CAF50;
+  color: white;
+}
+.green-button:hover {
+  background-color: #45a049;
+}
+.red-button {
+  background-color: #f44336;
+  color: white;
+}
+.red-button:hover {
+  background-color: #da190b;
+}
 </style>
 </head>
 <body>
 
 <!-- Sidebar (hidden by default) -->
 <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()"
-  class="w3-bar-item w3-button">Close Menu</a>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button">Close Menu</a>
   <a href="#food" onclick="w3_close()" class="w3-bar-item w3-button">Homepage</a>
   <a href="#food" onclick="w3_close()" class="w3-bar-item w3-button">Notifications</a>
   <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
@@ -37,55 +70,24 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 <div class="w3-top">
   <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
     <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
-    <a href="mainmenu.html" class="w3-right w3-padding-16">Back</a>
+    <a href="your_other_page.html" class="w3-right w3-padding-16">Back</a>
     <div class="w3-center w3-padding-16">BORG</div>
   </div>
 </div>
-  
-<!-- !PAGE CONTENT! -->
+
+<!-- Content -->
 <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
-
-  <!-- First Photo Grid-->
-  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
-    <div class="w3-quarter">
-      <img src="clothes.jpg" alt="Clothes" style="width:100%">
-      <h3>Clothes</h3>
-      <a href="clothesitems.html" class="donate-button">Donate</a>
-    </div>
-    <div class="w3-quarter">
-      <img src="toys.jpg" alt="Toys" style="width:100%">
-      <h3>Toys</h3>
-      <a href="toysitems.html" class="donate-button">Donate</a>
-    </div>
-    <div class="w3-quarter">
-      <img src="food.jpg" alt="Food" style="width:100%">
-      <h3>Food</h3>
-      <a href="fooditems.html" class="donate-button">Donate</a>
-    </div>
-    <div class="w3-quarter">
-      <img src="medical.jpg" alt="Medical Supplies" style="width:100%">
-      <h3>Medical Supplies</h3>
-      <a href="medicalsuppliesitems.html" class="donate-button">Donate</a>
+  <div class="w3-container w3-padding-32 w3-center">
+    <h2>What are you looking for?</h2>
+    <div class="button-container">
+      <button class="button blue-button" onclick="goToSearch()">Go to Search</button>
+      <button class="button green-button" onclick="goToEducational()">Educational Services</button>
+      <button class="button red-button" onclick="goToDonate()">Donate NOW!</button>
     </div>
   </div>
   
-  <!-- Second Photo Grid-->
-  <div class="w3-row-padding w3-padding-16 w3-center">
-    <div class="w3-quarter">
-      <img src="schoolsupplies.jpg" alt="School Supplies" style="width:100%">
-      <h3>School Supplies</h3>
-      <a href="schoolsuppliesitems.html" class="donate-button">Donate</a>
-    </div>
-    <div class="w3-quarter">
-      <img src="blooddonations.jpg" alt="Blood Donations" style="width:100%">
-      <h3>Blood Donations</h3>
-      <a href="blooddonationsitems.html" class="donate-button">Donate</a>
-    </div>
-  </div>
-
   <hr id="about">
 
-  <!-- About Section -->
   <div class="w3-container w3-padding-32 w3-center">  
     <h3>Consider Donating for the greater good!</h3><br>
     <img src="charitymoto.jpg" alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">
@@ -98,13 +100,32 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 </div>
 
 <script>
-// Script to open and close sidebar
+// Function to open sidebar
 function w3_open() {
   document.getElementById("mySidebar").style.display = "block";
 }
  
+// Function to close sidebar
 function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
+}
+
+// Function to handle go to search
+function goToSearch() {
+  // Replace this with your search page URL
+  window.location.href = "search2.html";
+}
+
+// Function to handle go to healthcare services
+function goToEducational() {
+  // Replace this with your healthcare services page URL
+  window.location.href = "healthcare.html";
+}
+
+// Function to handle go to donate
+function goToDonate() {
+  // Replace this with your donate page URL
+  window.location.href = "listofthings.html";
 }
 </script>
 
