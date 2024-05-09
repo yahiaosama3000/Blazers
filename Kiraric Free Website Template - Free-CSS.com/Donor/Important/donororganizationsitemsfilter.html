@@ -52,8 +52,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
     <label for="orgType">Organization Type:</label>
     <select id="orgType">
       <option value="">Select</option>
-      <option value="Type 1">Org 1</option>
-      <option value="Type 2">Org 2</option>
+      <option value="Type 1">Mosque</option>
+      <option value="Type 2">Food Bank</option>
+      <option value="Type 1">Orphanage</option>
+      <option value="Type 2">School</option>
     </select>
     <button onclick="applyFilters()" class="w3-button w3-blue w3-round-large">Apply Filters</button>
   </div>
@@ -85,7 +87,7 @@ function applyFilters() {
   }
   
   // Redirect to another page
-  window.location.href = "filtered_organizations.html?area=" + encodeURIComponent(area) + "&governorate=" + encodeURIComponent(governorate) + "&orgType=" + encodeURIComponent(orgType);
+  window.location.href = "donororgselected1.html?area=" + encodeURIComponent(area) + "&governorate=" + encodeURIComponent(governorate) + "&orgType=" + encodeURIComponent(orgType);
 }
 
 // Script to open and close sidebar
