@@ -93,20 +93,25 @@
             color: red;
             font-size: 12px;
         }
+        /* Updated style for Back button */
+        .w3-container .w3-button.back-button {
+            font-size: 24px;
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
 
 <!-- Back button -->
 <div class="w3-container w3-padding">
-    <a href="asignup.html" class="w3-right w3-button">Back</a>
+    <a href="asignup.html" class="w3-right w3-button back-button">Back</a>
 </div>
 
 <!-- Center container with Donor Register form -->
 <div class="center-container">
     <div class="container">
         <h2>Donor Register</h2>
-        <form id="registerForm" action="registration_success.html" method="post">
+        <form id="registerForm" action="adonerthreechoices.html" method="post">
             <div class="form-group">
                 <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
             </div>
