@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif; text-align: center;}
+.w3-bar-block .w3-bar-item {padding:20px}
+.donate-button {
+  background-color: #2196F3;
+  color: white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 10px;
+}
+.donate-button:hover {
+  background-color: #0b7dda;
+}
+.product-container {
+  display: inline-block;
+  text-align: center;
+}
+.golden-box {
+  background-color: gold;
+  color: black;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 20px;
+}
+.details {
+  color: red;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()"
+  class="w3-bar-item w3-button">Close Menu</a>
+  <a href="#food" onclick="w3_close()" class="w3-bar-item w3-button">Homepage</a>
+  <a href="#food" onclick="w3_close()" class="w3-bar-item w3-button">Notifications</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+</nav>
+
+<!-- Top menu -->
+<div class="w3-top">
+  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+    <a href="blooddonationsitems.html" class="w3-right w3-padding-16">Back</a>
+    <div class="w3-center w3-padding-16">BORG</div>
+  </div>
+</div>
+  
+<!-- !PRODUCT SELECTION SECTION! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px;">
+
+  <!-- Product Selection Section -->
+  <div class="w3-row-padding w3-padding-16" id="product-selection">
+    <div class="w3-quarter product-container">
+      <img src="blooddonations.jpg" alt="BloodDonations" style="width:100%">
+      <h3>Blood Donations</h3>     
+      <div class="select-container">
+        <label for="age">Hospital:</label>
+        <select id="age">
+          <option value="young">Hospital 1</option>
+          <option value="teen">Hospital 2</option>
+          <option value="adult">Hospital 3</option>
+          <option value="adult">Hospital 4</option>
+          <option value="adult">Hospital 5</option>
+          <option value="adult">Hospital 6</option>
+          <option value="adult">Hospital 7</option>
+          <option value="adult">Hospital 8</option>
+        </select>
+      </div>
+      <h3> </h3>
+      <div class="select-container">
+        <label for="gender">Governorate:</label>
+        <select id="gender">
+          <option value="male">Alexandria</option>
+          <option value="female">Aswan</option>
+          <option value="female">Asyut</option>
+          <option value="female">Beheira</option>
+          <option value="female">Beni Suef</option>
+          <option value="female">Cairo</option>
+          <option value="female">Dakahlia</option>
+          <option value="female">Damietta</option>
+          <option value="female">Faiyum</option>
+          <option value="female">Gharbia</option>
+          <option value="female">Giza</option>
+          <option value="female">Ismailia</option>
+          <option value="female">Kafr El Sheikh</option>
+          <option value="female">Luxor</option>
+          <option value="female">Matrouh</option>
+          <option value="female">Minya</option>
+          <option value="female">Monufia</option>
+          <option value="female">New Valley</option>
+          <option value="female">North Sinai</option>
+          <option value="female">Port Said</option>
+          <option value="female">Qalyubia</option>
+          <option value="female">Qena</option>
+          <option value="female">Red Sea</option>
+          <option value="female">Sharqia</option>
+          <option value="female">Sohag</option>
+          <option value="female">South Sinai</option>
+          <option value="female">Suez</option>
+        </select>
+      </div>
+      <h3> </h3>
+      <div class="select-container">
+        <label for="material">Area:</label>
+        <select id="material">
+          <option value="barbie">Area 1</option>
+          <option value="zeina">Area 2</option>
+        </select>
+      </div>
+      <button class="donate-button" onclick="redirectToDonatePage()">Donate</button>
+      <a href="bloodrequest3details.html" class="details">Details</a>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// Function to redirect to donate page
+function redirectToDonatePage() {
+  window.location.href = "donate.html";
+}
+</script>
+
+</body>
+</html>
