@@ -63,7 +63,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 
   <!-- Contact Button -->
   <div class="w3-center">
-    <a href="contact.html" class="w3-button w3-blue w3-padding-large w3-margin-top">Contact</a>
+    <a href="#" onclick="showContactMessage()" class="w3-button w3-blue w3-padding-large w3-margin-top">Contact</a>
   </div>
 
   <hr id="about">
@@ -89,6 +89,11 @@ function w3_open() {
  
 function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
+}
+
+// Function to show contact message
+function showContactMessage() {
+  alert("123456");
 }
 </script>
 
