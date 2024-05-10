@@ -9,7 +9,12 @@
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 .w3-bar-block .w3-bar-item {padding:20px}
-.donate-button {
+.donate-button-container {
+  position: relative;
+  display: inline-block;
+}
+
+.delete-button {
   background-color: #e4410b;
   color: white;
   border-radius: 10px;
@@ -17,9 +22,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
   cursor: pointer;
   text-decoration: none;
 }
-.donate-button:hover {
+
+.delete-button:hover {
   background-color: #0b7dda;
 }
+
 </style>
 </head>
 <body>
@@ -50,22 +57,30 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
     <div class="w3-quarter">
       <img src="deletedonation.jpg" alt="Clothes" style="width:100%">
       <h3>Donation 1</h3>
-      <a href="o-createclothes.html" class="donate-button">Delete</a>
+      <div class="donate-button-container">
+        <a href="o-createclothes.html" class="delete-button" onclick="confirmDelete(event)">Delete</a>
+      </div>
     </div>
     <div class="w3-quarter">
       <img src="deletedonation.jpg" alt="Toys" style="width:100%">
       <h3>Donation 2</h3>
-      <a href="o-createtoys.html" class="donate-button">Delete</a>
+      <div class="donate-button-container">
+        <a href="o-createtoys.html" class="delete-button" onclick="confirmDelete(event)">Delete</a>
+      </div>
     </div>
     <div class="w3-quarter">
       <img src="deletedonation.jpg" alt="Food" style="width:100%">
       <h3>Donation 3</h3>
-      <a href="o-createfood.html" class="donate-button">Delete</a>
+      <div class="donate-button-container">
+        <a href="o-createfood.html" class="delete-button" onclick="confirmDelete(event)">Delete</a>
+      </div>
     </div>
     <div class="w3-quarter">
       <img src="deletedonation.jpg" alt="Medical Supplies" style="width:100%">
       <h3>Donation 4</h3>
-      <a href="o-createmedicalsupplies.html" class="donate-button">Delete</a>
+      <div class="donate-button-container">
+        <a href="o-createmedicalsupplies.html" class="delete-button" onclick="confirmDelete(event)">Delete</a>
+      </div>
     </div>
   </div>
 
@@ -91,6 +106,13 @@ function w3_open() {
  
 function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
+}
+
+// Function to confirm deletion
+function confirmDelete(event) {
+  if (!confirm("Are you sure?")) {
+    event.preventDefault();
+  }
 }
 </script>
 
