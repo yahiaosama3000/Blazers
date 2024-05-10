@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BORG Charity - Organization Register</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+    <link rel="stylesheet" href="register.css">
+    <style>
+        body, h1, h2, h3, h4, h5, h6 {font-family: "Karma", sans-serif}
+        .w3-bar-block .w3-bar-item {padding:20px}
+        .donate-button {
+            background-color: #2196F3;
+            color: white;
+            border-radius: 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .donate-button:hover {
+            background-color: #0b7dda;
+        }
+        .sign-in-container {
+            text-align: center;
+            padding: 20px;
+            border: 2px solid #010e18;
+            border-radius: 10px;
+        }
+        .sign-in-text {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .admin-button {
+            background-color: #4CAF50;
+        }
+        .donor-button {
+            background-color: #f44336;
+        }
+        .organization-button {
+            background-color: #FFC107;
+        }
+        .sign-in-button {
+            margin-top: 10px;
+        }
+        .center-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 400px;
+            padding: 40px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+        button[type="submit"] {
+            width: 100%;
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        button[type="submit"]:hover {
+            background-color: #0b7dda;
+        }
+        .error-message {
+            color: red;
+            font-size: 12px;
+        }
+        /* Updated style for Back button */
+        .w3-container .w3-button.back-button {
+            font-size: 24px;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Back button -->
+<div class="w3-container w3-padding">
+    <a href="asignup.html" class="w3-right w3-button back-button">Back</a>
+</div>
+
+<!-- Center container with Donor Register form -->
+<div class="center-container">
+    <div class="container">
+        <h2>Admin Register</h2>
+        <form id="registerForm" action="o-anorganizationsignuplocation.html" method="post">
+            <div class="form-group">
+                <input type="text" id="username" name="username" placeholder="Username" required>
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <span class="error-message" id="passwordError"></span>
+            </div>
+            <button type="submit" id="submitBtn">Register</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    document.getElementById("registerForm").addEventListener("submit", function(event) {
+        var password = document.getElementById("password").value;
+        if (!isPasswordValid(password)) {
+            event.preventDefault();
+            document.getElementById("passwordError").textContent = "Password must be at least 12 characters long.";
+        } else {
+            document.getElementById("passwordError").textContent = "";
+        }
+    });
+
+    function isPasswordValid(password) {
+        return password.length >= 12;
+    }
+</script>
+</body>
+</html>
