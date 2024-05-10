@@ -4,27 +4,67 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Admin Dashboard</title>
-<link rel="stylesheet" href="dashboard.css">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0d1b2a; /* Dark blue background */
+    color: #fff; /* White text color */
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1f4068; /* Darker blue container */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .button {
+    padding: 8px 16px;
+    background-color: #fff; /* White button background */
+    color: #0d1b2a; /* Dark blue text color */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+    font-weight: bold; /* Bold text */
+  }
+  
+  .button:hover {
+    background-color: #c5cae9; /* Lighter blue hover color */
+    color: #0d1b2a; /* Dark blue text color */
+  }
+</style>
 </head>
 <body>
 
 <div class="container">
   <h1>Admin Dashboard</h1>
   <!-- Button to view organizations list -->
-  <button id="viewOrgListButton">View Organizations List</button>
+  <button class="button" onclick="redirectToOrganizationsPage()">View Organizations List</button>
   <!-- Button to view donor list -->
-  <button id="viewDonorListButton">View Donor List</button>
+  <button class="button" onclick="viewDonors()">View Donor List</button>
 </div>
 
-<script src="dashboard.js"></script>
 <script>
-document.getElementById("viewOrgListButton").addEventListener("click", function() {
-  window.location.href = "organizations.html"; // Redirect to the organizations page
-});
-
-document.getElementById("viewDonorListButton").addEventListener("click", function() {
-  window.location.href = "donors.html"; // Redirect to the donor page
-});
+  function redirectToOrganizationsPage() {
+    // Redirect to the organizations page
+    window.location.href = "organizations.html";
+  }
+  
+  function viewDonors() {
+    // Functionality to view donors list
+    console.log("Viewing Donors List...");
+  }
 </script>
 
 </body>
