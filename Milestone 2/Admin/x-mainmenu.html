@@ -40,6 +40,14 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 <!-- Sidebar (hidden by default) -->
 <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button">Close Menu</a>
+  <a href="organizationlist.html" onclick="w3_close()" class="w3-bar-item w3-button">Organization List</a>
+  <a href="donorlist.html" onclick="w3_close()" class="w3-bar-item w3-button">Donors List</a>
+  <a href="organizationsubmissions.html" onclick="w3_close()" class="w3-bar-item w3-button">Organization Submissions</a>
+  <a href="donorsubmissions.html" onclick="w3_close()" class="w3-bar-item w3-button">Donor Submissions</a>
+  <a href="organizationrequests.html" onclick="w3_close()" class="w3-bar-item w3-button">Organization Requests</a>
+  <a href="donorrequests.html" onclick="w3_close()" class="w3-bar-item w3-button">Donor Requests</a>
+  <a href="registeredorganizations.html" onclick="w3_close()" class="w3-bar-item w3-button">Registered Organizations</a>
+  <a href="deleteaccounts.html" onclick="w3_close()" class="w3-bar-item w3-button">Delete Accounts</a>
   <a href="donorpersonalaccount.html" onclick="w3_close()" class="w3-bar-item w3-button">Account</a>
   <a href="donornotifications1.html" onclick="w3_close()" class="w3-bar-item w3-button">Notifications</a>
   <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
@@ -58,7 +66,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
   <div class="w3-container w3-padding-32 w3-center">
     <h2>What are you looking for?</h2>
-    <input type="text" list="categories" id="searchInput" placeholder="Search for donors, organizations">
+    <input type="text" list="categories" id="searchInput" placeholder="Organization List, Donors List, Organization Submissions, Donor Submissions, Organization Requests, Donor Requests, Registered Organizations, Delete Accounts">
     <datalist id="categories">
       <option value="Organization List">
       <option value="Donors List">
@@ -67,15 +75,15 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
       <option value="Organization Requests">
       <option value="Donor Requests">
       <option value="Registered Organizations">
-      <option value="Delete Accounts"></option>
+      <option value="Delete Accounts">
     </datalist>
     <button onclick="searchRedirect()" class="w3-button w3-blue w3-round-large">Search</button>
   </div>
   
-  <!-- <div class="w3-center">
+  <div class="w3-center">
     <div class="circle" onclick="redirectTo('healthcareitems.html')">Healthcare</div>
     <div class="circle" onclick="redirectTo('educationalitems.html')">Educational</div>
-  </div> -->
+  </div>
 
   <hr id="about">
 
@@ -95,29 +103,29 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 function searchRedirect() {
   var searchTerm = document.getElementById("searchInput").value.toLowerCase();
   switch (searchTerm) {
-    case "Organization List":
-      window.location.href = "clothesitems.html";
+    case "organization list":
+      window.location.href = "organizationlist.html";
       break;
-    case "Donors List":
-      window.location.href = "toysitems.html";
+    case "donors list":
+      window.location.href = "donorlist.html";
       break;
-    case "Organization Submissions":
-      window.location.href = "fooditems.html";
+    case "organization submissions":
+      window.location.href = "organizationsubmissions.html";
       break;
-    case "Donor Submissions":
-      window.location.href = "medicalsuppliesitems.html";
+    case "donor submissions":
+      window.location.href = "donorsubmissions.html";
       break;
-    case "Organization Requests":
-      window.location.href = "schoolsuppliesitems.html";
+    case "organization requests":
+      window.location.href = "organizationrequests.html";
       break;
-    case "Donor Requests":
-      window.location.href = "blooddonationsitems.html";
+    case "donor requests":
+      window.location.href = "donorrequests.html";
       break;
-    case "Registered Organizations":
-      window.location.href = "donororganizationsitems.html";
+    case "registered organizations":
+      window.location.href = "registeredorganizations.html";
       break;
-    case "Delete Accounts":
-      window.location.href = "donororganizationsitems.html";
+    case "delete accounts":
+      window.location.href = "deleteaccounts.html";
       break;
     default:
       alert("No matching category found.");
