@@ -55,49 +55,49 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 
   <!-- First Photo Grid-->
   <div class="w3-row-padding w3-padding-16 w3-center" id="food">
-    <div class="w3-quarter">
+    <div class="w3-quarter" id="organization1">
       <img src="donororganization1.jpg" alt="Clothes" style="width:100%">
       <h3>Organization 1</h3>
-      <a href="x-requestsrejected.html" class="contact-button">Delete Account</a>
+      <a href="#" class="contact-button" onclick="deleteAccount('organization1')">Delete Account</a>
     </div>
-    <div class="w3-quarter">
+    <div class="w3-quarter" id="organization2">
       <img src="donororganization1.jpg" alt="Toys" style="width:100%">
       <h3>Organization 2</h3>
-      <a href="x-requestsrejected.html" class="contact-button">Delete Account</a>
+      <a href="#" class="contact-button" onclick="deleteAccount('organization2')">Delete Account</a>
     </div>
-    <div class="w3-quarter">
+    <div class="w3-quarter" id="organization3">
       <img src="donororganization1.jpg" alt="Food" style="width:100%">
       <h3>Organization 3</h3>
-      <a href="x-requestsrejected.html" class="contact-button">Delete Account</a>
+      <a href="#" class="contact-button" onclick="deleteAccount('organization3')">Delete Account</a>
     </div>
-    <div class="w3-quarter">
+    <div class="w3-quarter" id="organization4">
       <img src="donororganization1.jpg" alt="Medical Supplies" style="width:100%">
       <h3>Organization 4</h3>
-      <a href="x-requestsrejected.html" class="contact-button">Delete Account</a>
+      <a href="#" class="contact-button" onclick="deleteAccount('organization4')">Delete Account</a>
     </div>
   </div>
   
   <!-- Second Photo Grid-->
   <div class="w3-row-padding w3-padding-16 w3-center">
-    <div class="w3-quarter">
+    <div class="w3-quarter" id="teacher1">
       <img src="teacher.jpg" alt="School Supplies" style="width:100%">
       <h3>Teacher 1</h3>
-      <a href="x-requestsrejected.html" class="contact-button">Delete Account</a>
+      <a href="#" class="contact-button" onclick="deleteAccount('teacher1')">Delete Account</a>
     </div>
-    <div class="w3-quarter">
+    <div class="w3-quarter" id="teacher2">
       <img src="teacher.jpg" alt="Blood Donations" style="width:100%">
       <h3>Teacher 2</h3>
-      <a href="x-requestsrejected.html" class="contact-button">Delete Account</a>
+      <a href="#" class="contact-button" onclick="deleteAccount('teacher2')">Delete Account</a>
     </div>
-    <div class="w3-quarter">
+    <div class="w3-quarter" id="doctor1">
       <img src="doctor1.jpg" alt="Blood Donations" style="width:100%">
       <h3>Doctor 1</h3>
-      <a href="x-requestsrejected.html" class="contact-button">Delete Account</a>
+      <a href="#" class="contact-button" onclick="deleteAccount('doctor1')">Delete Account</a>
     </div>
-    <div class="w3-quarter">
+    <div class="w3-quarter" id="doctor2">
       <img src="doctor2.jpg" alt="Blood Donations" style="width:100%">
       <h3>Doctor 2</h3>
-      <a href="x-requestsrejected.html" class="contact-button">Delete Account</a>
+      <a href="#" class="contact-button" onclick="deleteAccount('doctor2')">Delete Account</a>
     </div>
   </div>
 
@@ -123,6 +123,14 @@ function w3_open() {
  
 function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
+}
+
+// Function to delete account
+function deleteAccount(elementId) {
+  var element = document.getElementById(elementId);
+  if (element) {
+    element.parentNode.removeChild(element);
+  }
 }
 </script>
 
