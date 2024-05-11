@@ -9,7 +9,7 @@
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 .w3-bar-block .w3-bar-item {padding:20px}
-.donate-button {
+.pending-button {
   background-color: #ccc;
   color: #666;
   border-radius: 10px;
@@ -18,8 +18,18 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
   text-decoration: none;
   pointer-events: none; /* Disable pointer events */
 }
-.donate-button:hover {
+.pending-button:hover {
   background-color: #ccc;
+}
+.contact-button {
+  background-color: #2196F3;
+  color: white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+.contact-button:hover {
+  background-color: #0b7dda;
 }
 </style>
 </head>
@@ -50,22 +60,26 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
     <div class="w3-quarter">
       <img src="donororganization1.jpg" alt="Clothes" style="width:100%">
       <h3>Organization 1</h3>
-      <a href="#" class="donate-button">Requested</a>
+      <a href="#" class="pending-button">Requested</a>
+      <a href="#" class="contact-button" data-message="Contact message for Teacher 1">Contact</a>
     </div>
     <div class="w3-quarter">
       <img src="donororganization1.jpg" alt="Toys" style="width:100%">
       <h3>Organization 2</h3>
-      <a href="#" class="donate-button">Requested</a>
+      <a href="#" class="pending-button">Requested</a>
+      <a href="#" class="contact-button" data-message="Contact message for Teacher 2">Contact</a>
     </div>
     <div class="w3-quarter">
       <img src="donororganization1.jpg" alt="Food" style="width:100%">
       <h3>Organization 3</h3>
-      <a href="#" class="donate-button">Requested</a>
+      <a href="#" class="pending-button">Requested</a>
+      <a href="#" class="contact-button" data-message="Contact message for Teacher 3">Contact</a>
     </div>
     <div class="w3-quarter">
       <img src="donororganization1.jpg" alt="Medical Supplies" style="width:100%">
       <h3>Organization 4</h3>
-      <a href="#" class="donate-button">Requested</a>
+      <a href="#" class="pending-button">Requested</a>
+      <a href="#" class="contact-button" data-message="Contact message for Teacher 4">Contact</a>
     </div>
   </div>
   
@@ -74,12 +88,26 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
     <div class="w3-quarter">
       <img src="donororganization1.jpg" alt="School Supplies" style="width:100%">
       <h3>Organization 5</h3>
-      <a href="#" class="donate-button">Requested</a>
+      <a href="#" class="pending-button">Requested</a>
+      <a href="#" class="contact-button" data-message="Contact message for Doctor 1">Contact</a>
     </div>
     <div class="w3-quarter">
       <img src="donororganization1.jpg" alt="Blood Donations" style="width:100%">
       <h3>Organization 6</h3>
-      <a href="#" class="donate-button">Requested</a>
+      <a href="#" class="pending-button">Requested</a>
+      <a href="#" class="contact-button" data-message="Contact message for Doctor 2">Contact</a>
+    </div>
+    <div class="w3-quarter">
+      <img src="donororganization1.jpg" alt="Blood Donations" style="width:100%">
+      <h3>Organization 7</h3>
+      <a href="#" class="pending-button">Requested</a>
+      <a href="#" class="contact-button" data-message="Contact message for Doctor 3">Contact</a>
+    </div>
+    <div class="w3-quarter">
+      <img src="donororganization1.jpg" alt="Blood Donations" style="width:100%">
+      <h3>Organization 8</h3>
+      <a href="#" class="pending-button">Requested</a>
+      <a href="#" class="contact-button" data-message="Contact message for Doctor 4">Contact</a>
     </div>
   </div>
 
@@ -106,6 +134,17 @@ function w3_open() {
 function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
 }
+
+// Function to show contact message
+document.addEventListener("DOMContentLoaded", function() {
+  var contactButtons = document.querySelectorAll(".contact-button");
+  contactButtons.forEach(function(button) {
+    button.addEventListener("click", function() {
+      var message = this.getAttribute("data-message");
+      alert(message);
+    });
+  });
+});
 </script>
 
 </body>
