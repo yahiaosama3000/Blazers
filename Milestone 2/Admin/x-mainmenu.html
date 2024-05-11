@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>W3.CSS Template</title>
+<title>Admin Dashboard</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
-.w3-bar-block .w3-bar-item {padding:20px}
+body, h1, h2, h3, h4, h5, h6 {font-family: "Karma", sans-serif;}
+.w3-bar-block .w3-bar-item {padding:20px;}
 .donate-button {
   background-color: #2196F3;
   color: white;
@@ -16,22 +16,38 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
   padding: 10px 20px;
   cursor: pointer;
   text-decoration: none;
+  border: 2px solid black; /* Add border */
 }
 .donate-button:hover {
   background-color: #0b7dda;
 }
-.circle {
+.rectangle {
   display: inline-block;
-  width: 100px;
+  width: 200px;
   height: 100px;
-  background-color: #9acd32; /* light green */
+  background-color: #f00808; /* light green */
   border: 2px solid black;
-  border-radius: 50%;
+  border-radius: 10px;
   text-align: center;
   line-height: 100px;
   margin: 20px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  color: white;
+  border: 2px solid black; /* Add border */
+}
+.rectangle:hover {
+  background-color: #ff884d; /* darker orange */
+}
+
+/* New class to make the button blue */
+.update-button {
+  background-color: #2196F3;
+}
+
+.update-button:hover {
+  background-color: #0b7dda;
 }
 </style>
 </head>
@@ -52,7 +68,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
   </div>
 </div>
   
-<!-- !SEARCH BAR! -->
+<!-- SEARCH BAR -->
 <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
   <div class="w3-container w3-padding-32 w3-center">
     <h2>Admin Dashboard</h2>
@@ -70,20 +86,22 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
     <button onclick="searchRedirect()" class="w3-button w3-blue w3-round-large">Search</button>
   </div>
   
+  <!-- Rectangles -->
   <div class="w3-center">
-    <div class="circle" onclick="redirectTo('healthcareitems.html')">Healthcare</div>
-    <div class="circle" onclick="redirectTo('educationalitems.html')">Educational</div>
+    <div class="rectangle" onclick="redirectTo('x-deleteaccounts.html')">Delete Accounts</div>
+    <div class="rectangle update-button" onclick="redirectTo('adminpersonalaccount.html')">Update Account</div>
   </div>
 
   <hr id="about">
 
+  <!-- About Section -->
   <div class="w3-container w3-padding-32 w3-center">  
-    <h3>Consider Donating for the greater good!</h3><br>
+    <h3>Consider Donating for the Greater Good!</h3><br>
     <img src="charitymoto.jpg" alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">
     <div class="w3-padding-32">
-      <h4><b>We appreciate your support!</b></h4>
-      <h6><i>Who are we?</i></h6>
-      <p> BORG is a non-monetary charity dedicated to making a difference in people's lives. Our mission is to provide opportunities, resources, and guidance to those in need. We believe in a world where everyone has access to basic necessities and support. We operate through collaboration, transparency, and empowerment, offering educational resources, mentorship, and essential supplies. Join us in creating a brighter future for all through acts of kindness and generosity. </p>
+      <h4><b>We Appreciate Your Support!</b></h4>
+      <h6><i>Who Are We?</i></h6>
+      <p>BORG is a non-monetary charity dedicated to making a difference in people's lives. Our mission is to provide opportunities, resources, and guidance to those in need. We believe in a world where everyone has access to basic necessities and support. We operate through collaboration, transparency, and empowerment, offering educational resources, mentorship, and essential supplies. Join us in creating a brighter future for all through acts of kindness and generosity.</p>
     </div>
   </div>
 </div>
