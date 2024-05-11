@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+.pending-button {
+  background-color: #ccc;
+  color: #666;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: not-allowed;
+  text-decoration: none;
+  pointer-events: none; /* Disable pointer events */
+}
+.pending-button:hover {
+  background-color: #ccc;
+}
+.contact-button {
+  background-color: #2196F3;
+  color: white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+.contact-button:hover {
+  background-color: #0b7dda;
+}
+</style>
+</head>
+<body>
+
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button">Close Menu</a>
+  <a href="donorpersonalaccount.html" onclick="w3_close()" class="w3-bar-item w3-button">Account</a>
+  <a href="donornotifications1.html" onclick="w3_close()" class="w3-bar-item w3-button">Notifications</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+</nav>
+
+<!-- Top menu -->
+<div class="w3-top">
+  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+    <a href="x-mainmenu.html" class="w3-right w3-padding-16">Back</a>
+    <div class="w3-center w3-padding-16">BORG</div>
+  </div>
+</div>
+  
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    <div class="w3-quarter">
+      <img src="teacher.jpg" alt="Clothes" style="width:100%">
+      <h3>Teacher 1</h3>
+      <a href="#" class="pending-button">Pending</a>
+      <a href="#" class="contact-button" data-message="Call: +201044433322">Contact</a>
+    </div>
+    <div class="w3-quarter">
+      <img src="teacher.jpg" alt="Toys" style="width:100%">
+      <h3>Teacher 2</h3>
+      <a href="#" class="pending-button">Pending</a>
+      <a href="#" class="contact-button" data-message="Call: +201122233344">Contact</a>
+    </div>
+    <div class="w3-quarter">
+      <img src="teacher.jpg" alt="Food" style="width:100%">
+      <h3>Teacher 3</h3>
+      <a href="#" class="pending-button">Pending</a>
+      <a href="#" class="contact-button" data-message="Call: +201288899900">Contact</a>
+    </div>
+    <div class="w3-quarter">
+      <img src="teacher.jpg" alt="Medical Supplies" style="width:100%">
+      <h3>Teacher 4</h3>
+      <a href="#" class="pending-button">Pending</a>
+      <a href="#" class="contact-button" data-message="Call: +2012428859974">Contact</a>
+    </div>
+  </div>
+  
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="doctor1.jpg" alt="School Supplies" style="width:100%">
+      <h3>Doctor 1</h3>
+      <a href="#" class="pending-button">Pending</a>
+      <a href="#" class="contact-button" data-message="Call: +201236547890">Contact</a>
+    </div>
+    <div class="w3-quarter">
+      <img src="doctor1.jpg" alt="Blood Donations" style="width:100%">
+      <h3>Doctor 2</h3>
+      <a href="#" class="pending-button">Pending</a>
+      <a href="#" class="contact-button" data-message="Call: +201055566677">Contact</a>
+    </div>
+    <div class="w3-quarter">
+      <img src="doctor2.jpg" alt="Blood Donations" style="width:100%">
+      <h3>Doctor 3</h3>
+      <a href="#" class="pending-button">Pending</a>
+      <a href="#" class="contact-button" data-message="Call: +201177788899">Contact</a>
+    </div>
+    <div class="w3-quarter">
+      <img src="doctor2.jpg" alt="Blood Donations" style="width:100%">
+      <h3>Doctor 4</h3>
+      <a href="#" class="pending-button">Pending</a>
+      <a href="#" class="contact-button" data-message="Call: +201299988877">Contact</a>
+    </div>
+  </div>
+
+  <hr id="about">
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32 w3-center">  
+    <h3>Consider Donating for the greater good!</h3><br>
+    <img src="charitymoto.jpg" alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">
+    <div class="w3-padding-32">
+      <h4><b>We appreciate your support!</b></h4>
+      <h6><i>Who are we?</i></h6>
+      <p> BORG is a non-monetary charity dedicated to making a difference in people's lives. Our mission is to provide opportunities, resources, and guidance to those in need. We believe in a world where everyone has access to basic necessities and support. We operate through collaboration, transparency, and empowerment, offering educational resources, mentorship, and essential supplies. Join us in creating a brighter future for all through acts of kindness and generosity. </p>
+    </div>
+  </div>
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// Function to show contact message
+document.addEventListener("DOMContentLoaded", function() {
+  var contactButtons = document.querySelectorAll(".contact-button");
+  contactButtons.forEach(function(button) {
+    button.addEventListener("click", function() {
+      var message = this.getAttribute("data-message");
+      alert(message);
+    });
+  });
+});
+</script>
+
+</body>
+</html>

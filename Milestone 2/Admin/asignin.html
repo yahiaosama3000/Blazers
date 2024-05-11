@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+.donate-button {
+  background-color: #2196F3;
+  color: white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.donate-button:hover {
+  background-color: #0b7dda;
+}
+.sign-in-container {
+  text-align: center;
+  padding: 20px;
+  border: 2px solid #010e18;
+  border-radius: 10px;
+}
+.sign-in-text {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.admin-button {
+  background-color: #4CAF50;
+}
+.donor-button {
+  background-color: #f44336;
+}
+.organization-button {
+  background-color: #FFC107;
+}
+.sign-in-button {
+  margin-top: 10px;
+}
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+</style>
+</head>
+<body>
+
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button">Close Menu</a>
+  <a href="ahomepage.html" onclick="w3_close()" class="w3-bar-item w3-button">Homepage</a>
+</nav>
+
+<!-- Top menu -->
+<div class="w3-top">
+  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+    <a href="ahomepage.html" class="w3-right w3-padding-16">Back</a>
+    <div class="w3-center w3-padding-16">BORG</div>
+  </div>
+</div>
+
+<!-- Center container for Sign in section -->
+<div class="center-container">
+  <!-- Sign in section -->
+  <div class="sign-in-container">
+    <div class="sign-in-text">Sign in as:</div>
+    <button class="donate-button admin-button sign-in-button" onclick="window.location.href='x-anadminsignin.html'">Admin</button><br>
+    <button class="donate-button donor-button sign-in-button" onclick="window.location.href='adonerthreechoices.html'">Donor</button><br>
+    <button class="donate-button organization-button sign-in-button" onclick="window.location.href='organization.html'">Organization</button><br>
+  </div>
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>
