@@ -15,6 +15,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
   border-radius: 10px;
   padding: 10px 20px;
   text-decoration: none;
+  cursor: pointer;
 }
 .pending-button:hover {
   background-color: #252ed6; /* Darker red color on hover */
@@ -25,6 +26,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
   border-radius: 10px;
   padding: 10px 20px;
   text-decoration: none;
+  cursor: pointer;
 }
 .contact-button:hover {
   background-color: #dd1916; /* Darker green color on hover */
@@ -58,26 +60,26 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
     <div class="w3-quarter">
       <img src="donororganization1.jpg" alt="Clothes" style="width:100%">
       <h3>Organization 1</h3>
-      <a href="x-requestsaccepted.html" class="pending-button">View</a>
-      <a href="x-requestsrejected.html" class="contact-button">Download</a>
+      <a href="#" class="pending-button" onclick="viewDetails(1,'Organization 1','123 Street, City, Country', 5)">View</a>
+      <a href="#" class="contact-button" onclick="download(1)">Download</a>
     </div>
     <div class="w3-quarter">
       <img src="donororganization1.jpg" alt="Toys" style="width:100%">
       <h3>Organization 2</h3>
-      <a href="x-requestsaccepted.html" class="pending-button">View</a>
-      <a href="x-requestsrejected.html" class="contact-button">Download</a>
+      <a href="#" class="pending-button" onclick="viewDetails(2,'Organization 2','456 Avenue, City, Country', 8)">View</a>
+      <a href="#" class="contact-button" onclick="download(2)">Download</a>
     </div>
     <div class="w3-quarter">
       <img src="donororganization1.jpg" alt="Food" style="width:100%">
       <h3>Organization 3</h3>
-      <a href="x-requestsaccepted.html" class="pending-button">View</a>
-      <a href="x-requestsrejected.html" class="contact-button">Download</a>
+      <a href="#" class="pending-button" onclick="viewDetails(3,'Organization 3','789 Road, City, Country', 3)">View</a>
+      <a href="#" class="contact-button" onclick="download(3)">Download</a>
     </div>
     <div class="w3-quarter">
       <img src="donororganization1.jpg" alt="Medical Supplies" style="width:100%">
       <h3>Organization 4</h3>
-      <a href="x-requestsaccepted.html" class="pending-button">View</a>
-      <a href="x-requestsrejected.html" class="contact-button">Download</a>
+      <a href="#" class="pending-button" onclick="viewDetails(4,'Organization 4','321 Lane, City, Country', 7)">View</a>
+      <a href="#" class="contact-button" onclick="download(4)">Download</a>
     </div>
   </div>
   
@@ -86,26 +88,26 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
     <div class="w3-quarter">
       <img src="donororganization1.jpg" alt="School Supplies" style="width:100%">
       <h3>Organization 5</h3>
-      <a href="x-requestsaccepted.html" class="pending-button">View</a>
-      <a href="x-requestsrejected.html" class="contact-button">Download</a>
+      <a href="#" class="pending-button" onclick="viewDetails(5,'Organization 5','987 Blvd, City, Country', 6)">View</a>
+      <a href="#" class="contact-button" onclick="download(5)">Download</a>
     </div>
     <div class="w3-quarter">
       <img src="donororganization1.jpg" alt="Blood Donations" style="width:100%">
       <h3>Organization 6</h3>
-      <a href="x-requestsaccepted.html" class="pending-button">View</a>
-      <a href="x-requestsrejected.html" class="contact-button">Download</a>
+      <a href="#" class="pending-button" onclick="viewDetails(6,'Organization 6','654 Drive, City, Country', 4)">View</a>
+      <a href="#" class="contact-button" onclick="download(6)">Download</a>
     </div>
     <div class="w3-quarter">
       <img src="donororganization1.jpg" alt="Blood Donations" style="width:100%">
       <h3>Organization 7</h3>
-      <a href="x-requestsaccepted.html" class="pending-button">View</a>
-      <a href="x-requestsrejected.html" class="contact-button">Download</a>
+      <a href="#" class="pending-button" onclick="viewDetails(7,'Organization 7','789 Street, City, Country', 2)">View</a>
+      <a href="#" class="contact-button" onclick="download(7)">Download</a>
     </div>
     <div class="w3-quarter">
       <img src="donororganization1.jpg" alt="Blood Donations" style="width:100%">
       <h3>Organization 8</h3>
-      <a href="x-requestsaccepted.html" class="pending-button">View</a>
-      <a href="x-requestsrejected.html" class="contact-button">Download</a>
+      <a href="#" class="pending-button" onclick="viewDetails(8,'Organization 8','147 Avenue, City, Country', 9)">View</a>
+      <a href="#" class="contact-button" onclick="download(8)">Download</a>
     </div>
   </div>
 
@@ -123,14 +125,59 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
   </div>
 </div>
 
+<!-- Popup Modal -->
+<div id="myModal" class="w3-modal">
+  <div class="w3-modal-content w3-animate-top w3-card-4">
+    <header class="w3-container w3-indigo"> 
+      <span onclick="document.getElementById('myModal').style.display='none'" 
+      class="w3-button w3-display-topright">&times;</span>
+      <h2 id="popupTitle"></h2>
+    </header>
+    <div class="w3-container">
+      <p id="popupContent"></p>
+    </div>
+    <footer class="w3-container w3-indigo">
+      <p></p>
+    </footer>
+  </div>
+</div>
+
 <script>
-// Script to open and close sidebar
 function w3_open() {
   document.getElementById("mySidebar").style.display = "block";
 }
  
 function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
+}
+
+function viewDetails(orgId, orgName, orgAddress, numDocuments) {
+  document.getElementById('popupTitle').innerHTML = orgName;
+  document.getElementById('popupContent').innerHTML = "Organization Address: " + orgAddress + "<br>Number of Documents: " + numDocuments;
+  document.getElementById('myModal').style.display = "block";
+}
+
+function download(orgId) {
+  // Generate a random PDF file name
+  var pdfFiles = [
+    "organization1.pdf",
+    "organization2.pdf",
+    "organization3.pdf",
+    "organization4.pdf",
+    "organization5.pdf",
+    "organization6.pdf",
+    "organization7.pdf",
+    "organization8.pdf"
+  ];
+
+  var randomIndex = Math.floor(Math.random() * pdfFiles.length);
+  var randomPDF = pdfFiles[randomIndex];
+
+  // Create an anchor element to initiate download
+  var link = document.createElement('a');
+  link.href = randomPDF;
+  link.download = randomPDF.split('/').pop();
+  link.click();
 }
 </script>
 
