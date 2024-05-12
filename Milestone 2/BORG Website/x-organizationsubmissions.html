@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+.pending-button {
+  background-color: #3169e2; /* Red color */
+  color: white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.pending-button:hover {
+  background-color: #252ed6; /* Darker red color on hover */
+}
+.contact-button {
+  background-color: #f44336; /* Green color */
+  color: white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.contact-button:hover {
+  background-color: #dd1916; /* Darker green color on hover */
+}
+</style>
+</head>
+<body>
+
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button">Close Menu</a>
+  <a href="adminpersonalaccount.html" onclick="w3_close()" class="w3-bar-item w3-button">Account</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+</nav>
+
+<!-- Top menu -->
+<div class="w3-top">
+  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+    <a href="x-mainmenu.html" class="w3-right w3-padding-16">Back</a>
+    <div class="w3-center w3-padding-16">BORG</div>
+  </div>
+</div>
+  
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    <div class="w3-quarter">
+      <img src="donororganization1.jpg" alt="Clothes" style="width:100%">
+      <h3>Organization 1</h3>
+      <a href="#" class="pending-button" onclick="viewDetails(1,'Resala Charity Organization','31 El-Batal Ahmed Abdel-Aziz St., El-Mohandessin, Giza Governorate', 3)">View</a>
+      <a href="#" class="contact-button" onclick="download(1)">Download</a>
+    </div>
+    <div class="w3-quarter">
+      <img src="donororganization1.jpg" alt="Toys" style="width:100%">
+      <h3>Organization 2</h3>
+      <a href="#" class="pending-button" onclick="viewDetails(2,'Misr El-Kheir Foundation','14 El Khalifa El Maamoun St., Al-Haram, Giza Governorate', 2)">View</a>
+      <a href="#" class="contact-button" onclick="download(2)">Download</a>
+    </div>
+    <div class="w3-quarter">
+      <img src="donororganization1.jpg" alt="Food" style="width:100%">
+      <h3>Organization 3</h3>
+      <a href="#" class="pending-button" onclick="viewDetails(3,'Egyptian Food Bank','25 El Nasr St., New Maadi, Cairo Governorate', 3)">View</a>
+      <a href="#" class="contact-button" onclick="download(3)">Download</a>
+    </div>
+    <div class="w3-quarter">
+      <img src="donororganization1.jpg" alt="Medical Supplies" style="width:100%">
+      <h3>Organization 4</h3>
+      <a href="#" class="pending-button" onclick="viewDetails(4,'Dar Al Orman Association','4 El Nasr St., El Haram, Giza Governorate', 4)">View</a>
+      <a href="#" class="contact-button" onclick="download(4)">Download</a>
+    </div>
+  </div>
+  
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="donororganization1.jpg" alt="School Supplies" style="width:100%">
+      <h3>Organization 5</h3>
+      <a href="#" class="pending-button" onclick="viewDetails(5,'Coptic Orphans','18 Shams El Din El Zahaby, Giza Governorate', 4)">View</a>
+      <a href="#" class="contact-button" onclick="download(5)">Download</a>
+    </div>
+    <div class="w3-quarter">
+      <img src="donororganization1.jpg" alt="Blood Donations" style="width:100%">
+      <h3>Organization 6</h3>
+      <a href="#" class="pending-button" onclick="viewDetails(6,'Islamic Relief Egypt','21 Othman Ibn Affan St., Nasr City, Cairo Governorate', 4)">View</a>
+      <a href="#" class="contact-button" onclick="download(6)">Download</a>
+    </div>
+    <div class="w3-quarter">
+      <img src="donororganization1.jpg" alt="Blood Donations" style="width:100%">
+      <h3>Organization 7</h3>
+      <a href="#" class="pending-button" onclick="viewDetails(7,'Life Makers Foundation','12 Maadi Star Towers, Maadi, Cairo Governorate', 2)">View</a>
+      <a href="#" class="contact-button" onclick="download(7)">Download</a>
+    </div>
+    <div class="w3-quarter">
+      <img src="donororganization1.jpg" alt="Blood Donations" style="width:100%">
+      <h3>Organization 8</h3>
+      <a href="#" class="pending-button" onclick="viewDetails(8,'Ahmed El-Maghraby Foundation','23 El Kharouba St., Mohandessin, Giza Governorate', 1)">View</a>
+      <a href="#" class="contact-button" onclick="download(8)">Download</a>
+    </div>
+  </div>
+
+  <hr id="about">
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32 w3-center">  
+    <h3>Consider Donating for the greater good!</h3><br>
+    <img src="charitymoto.jpg" alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">
+    <div class="w3-padding-32">
+      <h4><b>We appreciate your support!</b></h4>
+      <h6><i>Who are we?</i></h6>
+      <p> BORG is a non-monetary charity dedicated to making a difference in people's lives. Our mission is to provide opportunities, resources, and guidance to those in need. We believe in a world where everyone has access to basic necessities and support. We operate through collaboration, transparency, and empowerment, offering educational resources, mentorship, and essential supplies. Join us in creating a brighter future for all through acts of kindness and generosity. </p>
+    </div>
+  </div>
+</div>
+
+<!-- Popup Modal -->
+<div id="myModal" class="w3-modal">
+  <div class="w3-modal-content w3-animate-top w3-card-4">
+    <header class="w3-container w3-indigo"> 
+      <span onclick="document.getElementById('myModal').style.display='none'" 
+      class="w3-button w3-display-topright">&times;</span>
+      <h2 id="popupTitle"></h2>
+    </header>
+    <div class="w3-container">
+      <p id="popupContent"></p>
+    </div>
+    <footer class="w3-container w3-indigo">
+      <p></p>
+    </footer>
+  </div>
+</div>
+
+<script>
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+function viewDetails(orgId, orgName, orgAddress, numDocuments) {
+  document.getElementById('popupTitle').innerHTML = orgName;
+  document.getElementById('popupContent').innerHTML = "Organization Address: " + orgAddress + "<br>Number of Documents: " + numDocuments;
+  document.getElementById('myModal').style.display = "block";
+}
+
+function download(orgId) {
+  // Generate a random PDF file name
+  var pdfFiles = [
+    "organization1.pdf",
+    "organization2.pdf",
+    "organization3.pdf",
+    "organization4.pdf",
+    "organization5.pdf",
+    "organization6.pdf",
+    "organization7.pdf",
+    "organization8.pdf"
+  ];
+
+  var randomIndex = Math.floor(Math.random() * pdfFiles.length);
+  var randomPDF = pdfFiles[randomIndex];
+
+  // Create an anchor element to initiate download
+  var link = document.createElement('a');
+  link.href = randomPDF;
+  link.download = randomPDF.split('/').pop();
+  link.click();
+}
+</script>
+
+</body>
+</html>
