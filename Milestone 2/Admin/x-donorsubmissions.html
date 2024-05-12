@@ -59,25 +59,25 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
     <div class="w3-quarter">
       <img src="teacher.jpg" alt="Clothes" style="width:100%">
       <h3>Teacher 1</h3>
-      <a href="#" class="pending-button" onclick="viewDetails(1,'Teacher 1','123 Street, City, Country', 5)">View</a>
+      <a href="#" class="pending-button" onclick="viewDetails(1,'Amr Abdelrahman','Male', 2)">View</a>
       <a href="#" class="contact-button" onclick="download(1)">Download</a>
     </div>
     <div class="w3-quarter">
       <img src="teacher.jpg" alt="Toys" style="width:100%">
       <h3>Teacher 2</h3>
-      <a href="#" class="pending-button" onclick="viewDetails(2,'Teacher 2','456 Avenue, City, Country', 8)">View</a>
+      <a href="#" class="pending-button" onclick="viewDetails(2,'Tarek Hassan','Male', 3)">View</a>
       <a href="#" class="contact-button" onclick="download(2)">Download</a>
     </div>
     <div class="w3-quarter">
       <img src="teacher.jpg" alt="Food" style="width:100%">
       <h3>Teacher 3</h3>
-      <a href="#" class="pending-button" onclick="viewDetails(3,'Teacher 3','789 Road, City, Country', 3)">View</a>
+      <a href="#" class="pending-button" onclick="viewDetails(3,'Nour Abdelaziz','Female', 3)">View</a>
       <a href="#" class="contact-button" onclick="download(3)">Download</a>
     </div>
     <div class="w3-quarter">
       <img src="teacher.jpg" alt="Medical Supplies" style="width:100%">
       <h3>Teacher 4</h3>
-      <a href="#" class="pending-button" onclick="viewDetails(4,'Teacher 4','321 Lane, City, Country', 7)">View</a>
+      <a href="#" class="pending-button" onclick="viewDetails(4,'Yasmin Ahmed','Female', 4)">View</a>
       <a href="#" class="contact-button" onclick="download(4)">Download</a>
     </div>
   </div>
@@ -87,25 +87,25 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
     <div class="w3-quarter">
       <img src="doctor1.jpg" alt="School Supplies" style="width:100%">
       <h3>Doctor 1</h3>
-      <a href="#" class="pending-button" onclick="viewDetails(5,'Doctor 1','987 Blvd, City, Country', 6)">View</a>
+      <a href="#" class="pending-button" onclick="viewDetails(5,'Mahmoud Ibrahim','Male', 1)">View</a>
       <a href="#" class="contact-button" onclick="download(5)">Download</a>
     </div>
     <div class="w3-quarter">
       <img src="doctor1.jpg" alt="Blood Donations" style="width:100%">
       <h3>Doctor 2</h3>
-      <a href="#" class="pending-button" onclick="viewDetails(6,'Doctor 2','654 Drive, City, Country', 4)">View</a>
+      <a href="#" class="pending-button" onclick="viewDetails(6,'Ahmed Mahmoud','Male', 4)">View</a>
       <a href="#" class="contact-button" onclick="download(6)">Download</a>
     </div>
     <div class="w3-quarter">
       <img src="doctor2.jpg" alt="Blood Donations" style="width:100%">
       <h3>Doctor 3</h3>
-      <a href="#" class="pending-button" onclick="viewDetails(7,'Doctor 3','789 Street, City, Country', 2)">View</a>
+      <a href="#" class="pending-button" onclick="viewDetails(7,'Mariam Salah','Female', 2)">View</a>
       <a href="#" class="contact-button" onclick="download(7)">Download</a>
     </div>
     <div class="w3-quarter">
       <img src="doctor2.jpg" alt="Blood Donations" style="width:100%">
       <h3>Doctor 4</h3>
-      <a href="#" class="pending-button" onclick="viewDetails(8,'Doctor 4','147 Avenue, City, Country', 9)">View</a>
+      <a href="#" class="pending-button" onclick="viewDetails(8,'Aya Mohamed','Female', 5)">View</a>
       <a href="#" class="contact-button" onclick="download(8)">Download</a>
     </div>
   </div>
@@ -152,7 +152,7 @@ function w3_close() {
 
 function viewDetails(orgId, orgName, orgAddress, numDocuments) {
   document.getElementById('popupTitle').innerHTML = orgName;
-  document.getElementById('popupContent').innerHTML = "Organization Address: " + orgAddress + "<br>Number of Documents: " + numDocuments;
+  document.getElementById('popupContent').innerHTML = "Gender: " + orgAddress + "<br>Number of Documents: " + numDocuments;
   document.getElementById('myModal').style.display = "block";
 }
 
